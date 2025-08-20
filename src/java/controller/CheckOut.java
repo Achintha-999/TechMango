@@ -185,8 +185,8 @@ public class CheckOut extends HttpServlet {
             tr.commit();
 
             //PayHere process
-            String merahantID = "1224939";
-            String merchantSecret = "MjkzNzAyMDI3MzI1NzM4MzQ1ODc1MDk3OTU5NzAyNjMxNjU3Mjg=";
+            String merahantID = "<YOUR MERCHANT ID HERE>";
+            String merchantSecret = "<YOUR MERCHANT SECRET HERE>";
             String orderID = "#000" + orderId;
             String currency = "LKR";
             String formattedAmount = new DecimalFormat("0.00").format(amount);
