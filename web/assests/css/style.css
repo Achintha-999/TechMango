@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: changeBackground 15s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-height: 100vh;
+
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('../images/background.png');
+    }
+    40% {
+        background-image: url('../images/background2.png');
+    }
+    80% {
+        background-image: url('../images/background3.png');
+    }
+    100% {
+        background-image: url('../images/background.png');
+    }
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 103%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    
+    max-width: 450px;
+    padding: 2rem;
+   
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 95%;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+     width: 100%;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1.0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: contain;
+    width: 200px;
+    height: 110px;
+    margin-bottom: 10px;
+}
+
+/*.logo h1 {
+    color: #FF6B35;  Mango orange color 
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 5px 0; 
+    line-height: 1.2;
+}*/
+
+.logo p {
+    color: cornflowerblue;
+    font-size: 1rem;
+   
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: black;
+    font-weight: 400;
+    width: 180px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E05A2B;
+}
+
+.form-footer {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-footer a {
+    color: #FF6B35;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+
+.verification-container {
+    max-width: 500px;
+}
+.verification-code-input {
+    letter-spacing: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+}
+.resend-link {
+    cursor: pointer;
+}
+.resend-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+
+}

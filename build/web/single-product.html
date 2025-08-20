@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechMango - Product Details</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assests/css/header.css">
+        <link rel="stylesheet" href="assests/css/footer.css">
+        <link rel="stylesheet" href="assests/css/product.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assests/images/logo.png">
+    </head>
+    <body onload="loadData();">
+        <!-- Header (Same as other pages) -->
+        <!-- Header -->
+        <header class="main-header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Free Islandwide Delivery for Orders Over Rs. 200,000</p>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="#">Track Order</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assests/images/logo.png" alt="TechMango Logo" height="40">
+                    </a>
+
+                    <div class="search-box">
+                        <form class="d-flex">
+                            <select class="form-select search-category">
+                                <option>All Categories</option>
+                                <option>Laptops</option>
+                                <option>Desktops</option>
+                                <option>Components</option>
+                                <option>Accessories</option>
+                            </select>
+                            <input class="form-control search-input" type="search" placeholder="Search products...">
+                            <button class="btn search-btn" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="header-icons">
+                        <a href="my-account.html" class="account-icon">
+                            <i class="fas fa-user-circle"></i>
+                            <span>My Account</span>
+                        </a>
+                        <a href="wishlist.html" class="wishlist-icon">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+
+                            <h4><a href="sign-in.html">Sign In</a></h4>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="main-menu">
+                <div class="container">
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Laptops <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#">Gaming Laptops</a>
+                                <a href="#">Business Laptops</a>
+                                <a href="#">Ultrabooks</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Desktops <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#">Gaming PCs</a>
+                                <a href="#">Workstations</a>
+                                <a href="#">All-in-One</a>
+                            </div>
+                        </li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Deals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Product Details Section -->
+        <main class="product-details">
+            <div class="container py-5">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a id="cat-path">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" id="product">Product</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <!-- Product Images -->
+                    <!-- Product Images -->
+                    <div class="col-lg-6">
+                        <div class="product-gallery">
+                            <div class="main-image mb-3">
+                                <img src="" class="img-fluid" id="mainImage">
+                            </div>
+                            <div class="thumbnail-images d-flex gap-2">
+                                <div class="thumbnail active">
+                                    <img src="" alt="thumb 1" id="thumb1">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="" alt="thumb 2" id="thumb2">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="" alt="thumb 3" id="thumb3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Product Info -->
+                    <div class="col-lg-6">
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h1 class="product-title" id="product-title">Product Name</h1>
+                                <div class="product-meta">
+                                    <span class="brand">Brand: <strong id="brand-name"></strong></span>&nbsp;
+                                    <span class="model">Model: <strong id="model-name"></strong></span></br> </br>
+                                    <span class="model">Condition: <strong id="product-quality"></strong></span></br> </br>
+                                    <span class="model">In Stock: <strong id="product-stock"></strong></span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="review-count">(42 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-price">
+                                
+                                 <span class="current-price">Rs. <span id="product-price">00</span></span>
+                            </div>
+
+                            <div class="product-description">
+                                <p id="product-description">Product Description</p>
+                            </div>
+
+                            <div class="product-variants">
+                               
+
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                        <input type="number" value="1" min="1" class="quantity-input" id="add-to-cart-qty">
+                                        <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                    <button class="btn btn-primary btn-lg add-to-cart" id="add-to-cart-main">
+                                        <i class="fas fa-shopping-cart me-2"></i> Add to Cart
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-lg wishlist-btn">
+                                        <i class="fas fa-heart me-2"></i> Wishlist
+                                    </button>
+                                </div>
+
+                                <div class="product-meta-footer">
+                                    <div class="meta-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>1 Year Warranty</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-truck"></i>
+                                        <span>Islandwide Delivery</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-undo"></i>
+                                        <span>7-Day Returns</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Tabs -->
+                    <div class="product-tabs mt-5">
+                        <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button">Specifications</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button">Reviews</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="shipping-tab" data-bs-toggle="tab" data-bs-target="#shipping" type="button">Shipping & Returns</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="productTabsContent">
+                            <div class="tab-pane fade show active" id="specs" role="tabpanel">
+                                <div class="specs-table">
+                                      <div class="spec-row">
+                                        <div class="spec-name">Color</div>
+                                        <div class="spec-value">White</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-name">Processor</div>
+                                        <div class="spec-value">12th Gen Intel Core i7-12700H (14 cores, up to 4.7GHz)</div>
+                                    </div>
+                                    
+                                    <div class="spec-row">
+                                        <div class="spec-name">Memory</div>
+                                        <div class="spec-value">16GB DDR5 RAM (Upgradable to 32GB)</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-name">Storage</div>
+                                        <div class="spec-value">512GB PCIe NVMe SSD (Upgradable to 2TB)</div>
+                                    </div>
+                                    <div class="spec-row">
+                                        <div class="spec-name">Graphics</div>
+                                        <div class="spec-value">NVIDIA GeForce RTX 3050 Ti (4GB GDDR6)</div>
+                                    </div>
+                                   
+                                   
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                <div class="reviews-container">
+                                    <!-- Reviews would go here -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="shipping" role="tabpanel">
+                                <div class="shipping-info">
+                                    <h4>Shipping Information</h4>
+                                    <p>We offer free islandwide delivery for all orders over Rs. 20,000. Orders are typically processed within 1-2 business days and delivered within 3-5 business days.</p>
+
+                                    <h4 class="mt-4">Return Policy</h4>
+                                    <p>You may return most new, unopened items within 7 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Products -->
+                    <section class="related-products mt-5">
+                        <h2 class="section-title">You May Also Like</h2>
+                        <div class="row" id="smiler-product-main">
+                            <div class="col-lg-3 col-md-4 col-6" id="similer-product">
+                                <div class="product-card">
+                                    <div class="product-badge">New</div>
+                                    <div class="product-thumb">
+                                        <a href="#" id="similer-product-a1"><img src="assets/images/product/product-01.png" id="similer-product-image" alt="Product Image"></a>
+                                    </div>
+                                    <div class="product-details">
+                                        <h4><a href="#" id="similer-product-title">Title</a></h4>
+                                        <div class="product-price">
+                                            <span class="price" id="similer-product-price">Rs. 450,000</span>
+                                        </div>
+                                        <div class="product-bottom" id="similer-product-a2">
+                                            <a href="#" class="btn btn-sm btn-outline-secondary" id="simler-product-add-to-cart">Add to Cart</a>
+                                            <a href="#" class="wishlist-btn"><i class="far fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                        </div>
+                    </section>
+                </div>
+        </main>
+
+        <!-- Footer (Same as other pages) -->
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3>About TechMango</h3>
+                                <p>TechMango is Sri Lanka's premier computer shop offering the latest technology at competitive prices with exceptional customer service.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3>Quick Links</h3>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3>Customer Service</h3>
+                                <ul>
+                                    <li><a href="account.html">My Account</a></li>
+                                    <li><a href="#">Order Tracking</a></li>
+                                    <li><a href="#">Returns & Exchanges</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3>Contact Info</h3>
+                                <ul class="contact-info">
+                                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Colombo 05, Sri Lanka</li>
+                                    <li><i class="fas fa-phone"></i> +94 11 234 5678</li>
+                                    <li><i class="fas fa-envelope"></i> info@techmango.lk</li>
+                                    <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; 2025 TechMango. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="payment-methods">
+                                 <img src="assests/images/visa.png" alt="Visa">
+                                <img src="assests/images/mastercard.png" alt="Mastercard">
+                                <img src="assests/images/amex.png" alt="American Express">
+                                <img src="assests/images/paypal.png" alt="PayPal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="assests/js/single-product.js"></script>
+        <script>
+        // Thumbnail image click handler
+        $('.thumbnail img').click(function () {
+            const mainSrc = $(this).attr('src').replace('-thumb', '-main');
+            $('.main-image img').attr('src', mainSrc);
+            $('.thumbnail').removeClass('active');
+            $(this).parent().addClass('active');
+        });
+
+        // Color option click handler
+        $('.color-option').click(function () {
+            $('.color-option').removeClass('active');
+            $(this).addClass('active');
+            const color = $(this).data('color');
+            // You could change the main image based on color selection
+        });
+
+        // Storage/RAM option click handler
+        $('.storage-option, .ram-option').click(function () {
+            $(this).parent().find('button').removeClass('active');
+            $(this).addClass('active');
+            // You could update price based on selection
+        });
+
+        // Quantity selector
+        $('.quantity-btn').click(function () {
+            const input = $(this).siblings('.quantity-input');
+            let value = parseInt(input.val());
+
+            if ($(this).hasClass('plus')) {
+                value++;
+            } else if ($(this).hasClass('minus') && value > 1) {
+                value--;
+            }
+
+            input.val(value);
+        });
+        </script>
+    </body>
+</html>
