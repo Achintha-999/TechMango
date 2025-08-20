@@ -8,7 +8,7 @@
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tech_mango?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Achintha@54499?</property>
+        <property name="hibernate.connection.password"><YOUR PASSWORD></property>
         <property name="hibernate.show_sql">true</property>
         <mapping class="hibernate.User"/>
         <mapping class="hibernate.Admin"/>
