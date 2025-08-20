@@ -9,15 +9,12 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-/**
- *
- * @author tharaka@javainstitute.edu.lk
- */
+
 
 public class Mail {
 
-    private static final String APP_EMAIL = "achinthasa17@gmail.com";
-    private static final String APP_PASSWORD = "vqrz hsqh qgdr jdou";
+    private static final String APP_EMAIL = "<YOUR EMAIL>";
+    private static final String APP_PASSWORD = "<YOUR APP PASSWORD>";
 
     public static void sendMail(String email, String subject, String htmlContent) {
 
